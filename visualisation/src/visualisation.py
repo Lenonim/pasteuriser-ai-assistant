@@ -90,11 +90,10 @@ def clean_visualisation(_x=[], _y=[]):
     pyplot.figure(figsize=(240, 20), dpi=80)
 
     pyplot.plot(_x, _y, 'b', linewidth=0.5)
+    pyplot.axhline(y=0, color='r', linewidth=1)
+    pyplot.axhline(y=100, color='r', linewidth=1)
     pyplot.xlabel('time moments')
     pyplot.ylabel('degree of discovery')
-
-    pyplot.axhline(y=0, color='r', linewidth=2)
-    pyplot.axhline(y=100, color='r', linewidth=2)
 
     pyplot.grid(True)
     pyplot.show()
@@ -106,12 +105,16 @@ def double_visualisation(_x=[], _y=[]):
 
     pyplot.subplot(2, 1, 1)
     pyplot.plot(_x[:int(len(_x)/2)], _y[:int(len(_y)/2)], 'b', linewidth=1)
+    pyplot.axhline(y=0, color='r', linewidth=1)
+    pyplot.axhline(y=100, color='r', linewidth=1)
     pyplot.xlabel('time moments')
     pyplot.ylabel('degree of discovery')
     pyplot.grid(True)
 
     pyplot.subplot(2, 1, 2)
     pyplot.plot(_x[int(len(_x)/2):], _y[int(len(_y)/2):], 'b', linewidth=1)
+    pyplot.axhline(y=0, color='r', linewidth=1)
+    pyplot.axhline(y=100, color='r', linewidth=1)
     pyplot.xlabel('time moments')
     pyplot.ylabel('expenditure')
     pyplot.grid(True)
@@ -127,6 +130,8 @@ def quad_visualisation(_x=[], _y=[]):
     pyplot.plot(_x[: int(len(_x)/4)],
                 _y[: int(len(_y)/4)],
                 'b', linewidth=0.5)
+    pyplot.axhline(y=0, color='r', linewidth=1)
+    pyplot.axhline(y=100, color='r', linewidth=1)
     pyplot.xlabel('time moments')
     pyplot.ylabel('degree of discovery')
     pyplot.grid(True)
@@ -135,6 +140,8 @@ def quad_visualisation(_x=[], _y=[]):
     pyplot.plot(_x[int(len(_x)/4) : int(len(_x)/2)],
                 _y[int(len(_y)/4) : int(len(_y)/2)],
                 'b', linewidth=0.5)
+    pyplot.axhline(y=0, color='r', linewidth=1)
+    pyplot.axhline(y=100, color='r', linewidth=1)
     pyplot.xlabel('time moments')
     pyplot.ylabel('expenditure')
     pyplot.grid(True)
@@ -143,6 +150,8 @@ def quad_visualisation(_x=[], _y=[]):
     pyplot.plot(_x[int(len(_x)/2) : int(len(_x)/4)*3],
                 _y[int(len(_y)/2) : int(len(_y)/4)*3],
                 'b', linewidth=0.5)
+    pyplot.axhline(y=0, color='r', linewidth=1)
+    pyplot.axhline(y=100, color='r', linewidth=1)
     pyplot.xlabel('time moments')
     pyplot.ylabel('expenditure')
     pyplot.grid(True)
@@ -151,6 +160,8 @@ def quad_visualisation(_x=[], _y=[]):
     pyplot.plot(_x[int(len(_x)/4)*3 :],
                 _y[int(len(_y)/4)*3 :],
                 'b', linewidth=0.5)
+    pyplot.axhline(y=0, color='r', linewidth=1)
+    pyplot.axhline(y=100, color='r', linewidth=1)
     pyplot.xlabel('time moments')
     pyplot.ylabel('expenditure')
     pyplot.grid(True)
@@ -172,6 +183,8 @@ def zoom_visualisation(_x=[], _y=[]):
 
         ax.scatter(_x, _y, c='black')
         ax.plot(_x, _y, color='b')
+        pyplot.axhline(y=0, color='r', linewidth=1)
+        pyplot.axhline(y=100, color='r', linewidth=1)
         ax.grid(True)
 
         scale = 1.1
