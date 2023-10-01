@@ -6,13 +6,22 @@ int main()
 {
 	srand(time(NULL));
 
-	size_t input_range = 4;
-	size_t hidden_range = 48;
-	size_t output_range = 2;
-
 	string file_name;
 	std::cout << "Enter the data file name: ";
 	std::cin >> file_name;
+	
+	size_t input_range;
+	size_t hidden_range;
+	size_t output_range;
+
+	std::cout << "Enter the input range: ";
+	std::cin >> input_range;
+
+	std::cout << "Enter the hidden range: ";
+	std::cin >> hidden_range;
+
+	std::cout << "Enter the output range: ";
+	std::cin >> output_range;
 
 	std::clock_t start, finish;
 	start = clock();
@@ -27,7 +36,7 @@ int main()
 	std::cout << "data read and proc per time = " 
 		<< (double)(finish - start) / CLOCKS_PER_SEC << " sec\n";
 	
-	LSTM lstm(0.001, 0, input_range, hidden_range, output_range);
+	LSTM lstm(0.001, 10, input_range, hidden_range, output_range);
 	lstm.fit(train_data);
 	
 	start = clock();
@@ -43,7 +52,8 @@ int main()
 	std::cout << "data dump per time = "
 		<< (double)(finish - start) / CLOCKS_PER_SEC << " sec\n";
 
-	system("python visual.py");
+	file_name = "python visual.py " + file_name;
+	system(file_name.c_str());
 
 	return 0;
 }

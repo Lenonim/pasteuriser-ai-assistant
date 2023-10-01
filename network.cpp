@@ -92,7 +92,7 @@ void LSTM::train(double* x, double* y_real, size_t k) {
 
 	// ----- градиентный спуск -----
 
-	if (fabs(e) > this->precision) {
+	if (fabs(e / double(output_range)) > this->target_error) {
 		double* de_dy = new double[this->output_range];
 		for (size_t i = 0; i < this->output_range; i++) {
 			de_dy[i] = (y_predict[i] - y_real[i]) * dif_sigm(y_predict[i]);
@@ -166,7 +166,7 @@ void LSTM::train(double* x, double* y_real, size_t k) {
 	delete[] state_gate;
 	delete[] output_gate;
 }
-void LSTM::fit(DataVector& train_data) {
+void LSTM::fit(DataVector& train_data, unsigned __int32 batch) {
 	// создаём и конфигурируем скейлер
 	Scaler sc;
 	sc.configure(120, 0);
@@ -188,6 +188,11 @@ void LSTM::fit(DataVector& train_data) {
 		h[i] = new double[this->hidden_range] {0};
 	}
 
+	// настраиваем групповое обучение
+	if (batch == 0 || batch > work_size)
+		batch = work_size;
+	unsigned int batch_interator = 0; // чтобы знать, сколько пачек подали
+
 	// выделяем память под промежуточные веса
 	select_memory_for_temp_weight();
 
@@ -200,7 +205,7 @@ void LSTM::fit(DataVector& train_data) {
 		// сохряняем текущие значения весов
 		copy_weight();
 
-		// обнуляем среднюю ошибку эпохи предсказаний
+		// обнуляем среднюю квадратичную ошибку эпохи предсказаний
 		e_predict = 0;
 
 		// формируем входные цепочки и их соотвесттвующие реальные значения, с которыми будет проводиться сравнение предсказаний
@@ -209,20 +214,32 @@ void LSTM::fit(DataVector& train_data) {
 			y_real[j] = create_input_vector(train_data, this->output_range, j + this->input_range);
 		}
 		
+		// TODO -------------------------------------------------------------------
+		// организовать групповое обучение
+		// прогонозируем, чтобы получить значения памяти на каждой итерации 
 		for (size_t j = 0; j < work_size; j++) {
 			garbage_catcher = forecast(x[j], j); // этот цикл нужен, чтобы расчитать каждые вектора C и h для каждой итерации 
 			delete[] garbage_catcher;
 		}
 		
+		// обучаем сеть
 		for (int j = work_size - 1; j >= 0; j--) {
 			train(x[j], y_real[j], j); // метод обратного распространения во времени		
 			delete[] x[j]; // удаление для дальнейшего обновления
 			delete[] y_real[j];
 		}
+		// ------------------------------------------------------------------------------
 
 		finish = clock();
 		std::cout << "| time = " << (double)(finish - start) / CLOCKS_PER_SEC << " sec "
-			<< "| E = " << e_predict / 2 << "\n";
+			<< "| E = " << e_predict << "\n";
+
+#ifdef ErrorInfo
+		std::ofstream error_file;
+		error_file.open("Error.csv", std::ios::app);
+		error_file << i << ";" << e_predict << "\n";
+		error_file.close();
+#endif // ErrorInfo
 	}
 
 	// сохраняем память сети после последнего её расчёта при обучении
@@ -431,7 +448,7 @@ void load_model(LSTM& lstm, string file_name) {
 	}
 
 	// параметры
-	work_file.read((char*)&lstm.precision, sizeof(double));
+	work_file.read((char*)&lstm.target_error, sizeof(double));
 	work_file.read((char*)&lstm.rate, sizeof(double));
 	work_file.read((char*)&lstm.e_predict, sizeof(double));
 	work_file.read((char*)&lstm.epochs, sizeof(unint16));
@@ -476,7 +493,7 @@ void dump_model(LSTM& lstm, string file_name) {
 	result_file.write((char*)&lstm.output_range, sizeof(lstm.output_range));
 
 	// параметры
-	result_file.write((char*)&lstm.precision, sizeof(lstm.precision));
+	result_file.write((char*)&lstm.target_error, sizeof(lstm.target_error));
 	result_file.write((char*)&lstm.rate, sizeof(lstm.rate));
 	result_file.write((char*)&lstm.e_predict, sizeof(lstm.e_predict));
 	result_file.write((char*)&lstm.epochs, sizeof(lstm.epochs));

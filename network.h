@@ -1,4 +1,7 @@
 #pragma once
+
+#define ErrorInfo
+
 #include "math_for_network.h"
 
 typedef unsigned __int16 unint16;
@@ -11,7 +14,7 @@ protected:
 	unint16 hidden_range; // размер скрытой цепочки в сети
 	unint16 output_range; // размер выходной цепочки в сети
 	double rate; // скорость оубчения сети
-	double precision = 0.0000001; // точность предсказаний
+	double target_error = 0.000001; // точность предсказаний
 	double e_predict = 0; // ошибка предсказания
 
 	// параметрые, представляющие память сети
@@ -21,7 +24,7 @@ protected:
 	double** W_y; // веса для предсказаний
 
 public:
-	virtual void fit(DataVector& train_data) = 0; // обучить сеть
+	virtual void fit(DataVector& train_data, unsigned __int32 batch = 0) = 0; // обучить сеть
 	virtual void predict(DataVector& test_data) = 0; // выполнить предсказание
 
 	RecurrentNeuron(double rate, unint16 epochs, unint16 input_range);
@@ -84,7 +87,7 @@ class LSTM : public RecurrentNeuron{
 
 public:
 	// функции, реализующий подачу данных в математический аппарат сети для нормального обучения или прогноза
-	virtual void fit(DataVector& train_data) override;
+	virtual void fit(DataVector& train_data, unsigned __int32 batch = 0) override;
 	virtual void predict(DataVector& test_data) override;
 
 	LSTM(double rate, unint16 epochs, unint16 input_range, unint16 hidden_range, unint16 output_range);
