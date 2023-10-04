@@ -49,6 +49,16 @@ void LSTM::free_temp_weigth() {
 
 	delete_matrix(_W_y, output_range);
 }
+void LSTM::clear_futur() {
+	for (size_t i = 0; i < this->hidden_range; i++) {
+		this->forgate_futur[i] = 0;
+		this->de_dC_futur[i] = 0;
+		this->de_dF_futur[i] = 0;
+		this->de_dG_futur[i] = 0;
+		this->de_dI_futur[i] = 0;
+		this->de_dO_futur[i] = 0;
+	}
+}
 
 void LSTM::train(double* x, double* y_real, size_t k) {
 	// ----- расчЄт модели -----
@@ -166,7 +176,7 @@ void LSTM::train(double* x, double* y_real, size_t k) {
 	delete[] state_gate;
 	delete[] output_gate;
 }
-void LSTM::fit(DataVector& train_data, unsigned __int32 batch) {
+void LSTM::fit(DataVector& train_data, long long batch) {
 	// создаЄм и конфигурируем скейлер
 	Scaler sc;
 	sc.configure(120, 0);
@@ -189,12 +199,18 @@ void LSTM::fit(DataVector& train_data, unsigned __int32 batch) {
 	}
 
 	// настраиваем групповое обучение
-	if (batch == 0 || batch > work_size)
+	if (batch <= 0 || batch > work_size)
 		batch = work_size;
-	unsigned int batch_interator = 0; // чтобы знать, сколько пачек подали
+	long long batch_interator; // чтобы знать, сколько пачек подали
 
 	// выдел€ем пам€ть под промежуточные веса
 	select_memory_for_temp_weight();
+
+#ifdef ErrorInfo
+	// создаЄм файл ошибок
+	std::ofstream error_file;
+	error_file.open("Error.csv");
+#endif // ErrorInfo
 
 	// обучение сети
 	for (size_t i = 0; i < this->epochs; i++) {
@@ -205,8 +221,9 @@ void LSTM::fit(DataVector& train_data, unsigned __int32 batch) {
 		// сохр€н€ем текущие значени€ весов
 		copy_weight();
 
-		// обнул€ем среднюю квадратичную ошибку эпохи предсказаний
+		// обнул€ем среднюю квадратичную ошибку эпохи предсказаний и итератор подачи пачек
 		e_predict = 0;
+		batch_interator = 0;
 
 		// формируем входные цепочки и их соотвесттвующие реальные значени€, с которыми будет проводитьс€ сравнение предсказаний
 		for (int j = 0; j < work_size; j++) {
@@ -216,17 +233,32 @@ void LSTM::fit(DataVector& train_data, unsigned __int32 batch) {
 		
 		// TODO -------------------------------------------------------------------
 		// организовать групповое обучение
-		// прогонозируем, чтобы получить значени€ пам€ти на каждой итерации 
-		for (size_t j = 0; j < work_size; j++) {
-			garbage_catcher = forecast(x[j], j); // этот цикл нужен, чтобы расчитать каждые вектора C и h дл€ каждой итерации 
-			delete[] garbage_catcher;
-		}
-		
-		// обучаем сеть
-		for (int j = work_size - 1; j >= 0; j--) {
-			train(x[j], y_real[j], j); // метод обратного распространени€ во времени		
-			delete[] x[j]; // удаление дл€ дальнейшего обновлени€
-			delete[] y_real[j];
+		while (batch * batch_interator < work_size) {
+			// прогонозируем, чтобы получить значени€ пам€ти на каждой итерации 
+			for (size_t j = batch * batch_interator; j < batch * (batch_interator + 1) && j < work_size; j++) {
+				garbage_catcher = forecast(x[j], j); // этот цикл нужен, чтобы расчитать каждые вектора C и h дл€ каждой итерации 
+				delete[] garbage_catcher;
+			}
+
+			// обозначим, что подали одну пачку 
+			batch_interator++;
+
+			// защитим от выхода за границы массива
+			long long j;
+			if (batch * batch_interator > work_size)
+				j = work_size - 1;
+			else
+				j = batch * batch_interator - 1;
+
+			// обучаем сеть
+			for (j; j >= batch * (batch_interator - 1); j--) {
+				train(x[j], y_real[j], j); // метод обратного распространени€ во времени		
+				delete[] x[j]; // удаление дл€ дальнейшего обновлени€
+				delete[] y_real[j];
+			}
+
+			// обнул€ем ошибки по будущему
+			this->clear_futur();
 		}
 		// ------------------------------------------------------------------------------
 
@@ -235,12 +267,15 @@ void LSTM::fit(DataVector& train_data, unsigned __int32 batch) {
 			<< "| E = " << e_predict << "\n";
 
 #ifdef ErrorInfo
-		std::ofstream error_file;
-		error_file.open("Error.csv", std::ios::app);
+		// записываем результаты ошибки в файл
 		error_file << i << ";" << e_predict << "\n";
-		error_file.close();
 #endif // ErrorInfo
 	}
+
+#ifdef ErrorInfo
+	// закрываем поток работы с файлом ошибок
+	error_file.close();
+#endif // ErrorInfo
 
 	// сохран€ем пам€ть сети после последнего еЄ расчЄта при обучении
 	copy_vector(last_C_from_train, C[work_size], this->hidden_range);

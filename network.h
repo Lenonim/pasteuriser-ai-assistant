@@ -24,7 +24,7 @@ protected:
 	double** W_y; // веса для предсказаний
 
 public:
-	virtual void fit(DataVector& train_data, unsigned __int32 batch = 0) = 0; // обучить сеть
+	virtual void fit(DataVector& train_data, long long batch = 0) = 0; // обучить сеть
 	virtual void predict(DataVector& test_data) = 0; // выполнить предсказание
 
 	RecurrentNeuron(double rate, unint16 epochs, unint16 input_range);
@@ -76,6 +76,7 @@ class LSTM : public RecurrentNeuron{
 	void select_memory_for_temp_weight();
 	void copy_weight();
 	void free_temp_weigth();
+	void clear_futur();
 
 	// функции реализующие математический аппарат для работы сети
 	void train(double* x, double* y_real, size_t k = 0);
@@ -87,7 +88,7 @@ class LSTM : public RecurrentNeuron{
 
 public:
 	// функции, реализующий подачу данных в математический аппарат сети для нормального обучения или прогноза
-	virtual void fit(DataVector& train_data, unsigned __int32 batch = 0) override;
+	virtual void fit(DataVector& train_data, long long batch = 0) override;
 	virtual void predict(DataVector& test_data) override;
 
 	LSTM(double rate, unint16 epochs, unint16 input_range, unint16 hidden_range, unint16 output_range);
