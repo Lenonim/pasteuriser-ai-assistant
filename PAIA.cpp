@@ -13,8 +13,6 @@ int main()
 	size_t input_range;
 	size_t hidden_range;
 	size_t output_range;
-	size_t epochs = 100;
-	double learning_rate = 0.001;
 
 	std::cout << "Enter the input range: ";
 	std::cin >> input_range;
@@ -38,8 +36,7 @@ int main()
 	std::cout << "data read and proc per time = " 
 		<< (double)(finish - start) / CLOCKS_PER_SEC << " sec\n";
 	
-	long long batch = train_data.size() / 10;
-	LSTM lstm(learning_rate, epochs, input_range, hidden_range, output_range);
+	LSTM lstm(0.001, 100, input_range, hidden_range, output_range);
 	lstm.fit(train_data, 0);
 	
 	start = clock();
