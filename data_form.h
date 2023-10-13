@@ -4,6 +4,7 @@
 #include <string>
 #include <ctime>
 #include <typeinfo>
+#include <algorithm>
 
 using std::string;
 
@@ -13,6 +14,8 @@ struct DATA {
     double value;
 
     void operator=(const DATA& data);
+    bool operator>(const DATA& data);
+    bool operator<(const DATA& data);
 
     friend std::ostream& operator<<(std::ostream& os, const DATA& data);
     friend std::istream& operator>>(std::istream& is, const DATA& data);
@@ -37,6 +40,10 @@ public:
 	DataVector();
 	DataVector(std::string file_name);
     DataVector(size_t size_of);
+
+    DATA get_max_element();
+    
+    DATA get_min_element();
 
 	void push_back(const DATA& value);
 

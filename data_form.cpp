@@ -17,6 +17,20 @@ void DATA::operator=(const DATA& data) {
 	this->value = data.value;
 }
 
+bool DATA::operator>(const DATA& data) {
+	if (this->value > data.value)
+		return true;
+	else
+		return false;
+}
+
+bool DATA::operator<(const DATA& data) {
+	if (this->value < data.value)
+		return true;
+	else
+		return false;
+}
+
 DATA::DATA() {
 	this->cid = __int8();
 	this->time = unsigned int();
@@ -93,6 +107,24 @@ DataVector& DataVector::operator=(DataVector& other) {
 
 DataVector::~DataVector() {
 	delete[] array;
+}
+
+DATA DataVector::get_max_element() {
+	DATA max_element = this->array[0];
+	for (size_t i = 1; i < this->size; i++) {
+		if (max_element < this->array[i])
+			max_element = this->array[i];
+	}
+	return max_element;
+}
+
+DATA DataVector::get_min_element() {
+	DATA min_element = this->array[0];
+	for (size_t i = 1; i < this->size; i++) {
+		if (min_element > this->array[i])
+			min_element = this->array[i];
+	}
+	return min_element;
 }
 
 void DataVector::inc_size() {

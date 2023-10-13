@@ -197,7 +197,9 @@ void LSTM::calculate_gates(double*& forgate_gate, double*& x, double*& input_gat
 void LSTM::fit(DataVector& train_data, long long batch_size) {
 	// создаём и конфигурируем скейлер
 	Scaler scaler;
-	scaler.configure(120, 0);
+	auto max_element = train_data.get_max_element();
+	auto min_element = train_data.get_min_element();
+	scaler.configure(max_element.value + max_element.value * 0.3, min_element.value - min_element.value * 0.3);
 
 	// скейлим входные данные
 	scaler.scale(train_data);
