@@ -36,8 +36,8 @@ int main()
 	std::cout << "data read and proc per time = " 
 		<< (double)(finish - start) / CLOCKS_PER_SEC << " sec\n";
 	
-	LSTM lstm(0.001, 100, input_range, hidden_range, output_range);
-	lstm.fit(train_data, 0);
+	LSTM lstm(0.001, 150, input_range, hidden_range, output_range);
+	lstm.fit(train_data, 2.0, input_range * 1000);
 	
 	start = clock();
 		lstm.predict(test_data);
@@ -50,6 +50,12 @@ int main()
 		dump_data(test_data, "test.csv");
 	finish = clock();
 	std::cout << "data dump per time = "
+		<< (double)(finish - start) / CLOCKS_PER_SEC << " sec\n";
+
+	start = clock();
+		dump_model(lstm, "012-038-001 d1c1 Shaman.lstm");
+	finish = clock();
+	std::cout << "model dump per time = "
 		<< (double)(finish - start) / CLOCKS_PER_SEC << " sec\n";
 
 	file_name = "python visual.py " + file_name;

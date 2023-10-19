@@ -14,7 +14,6 @@ protected:
 	unint16 hidden_range; // размер скрытой цепочки в сети
 	unint16 output_range; // размер выходной цепочки в сети
 	double learning_rate; 
-	double target_error = 0.000001; // точность предсказаний
 	double predict_error = 0; // ошибка предсказани€
 
 	// параметрые, представл€ющие пам€ть сети
@@ -24,7 +23,7 @@ protected:
 	double** W_y; // веса дл€ предсказаний
 
 public:
-	virtual void fit(DataVector& train_data, long long batch_size = 0) = 0; // обучить сеть
+	virtual void fit(DataVector& train_data, double target_error = 0, long long batch_size = 0) = 0; // обучить сеть
 	virtual void predict(DataVector& test_data) = 0; // выполнить предсказание
 
 	RecurrentNeuron(double learning_rate, unint16 epochs, unint16 input_range);
@@ -72,7 +71,7 @@ class LSTM : public RecurrentNeuron{
 
 	double** _W_y = nullptr;
 
-	// функции дл€ работы с промежуточными весами
+	// функции дл€ работы с весами и будущими элементами
 	void select_memory_for_temp_weight();
 	void copy_weight();
 	void free_temp_weigth();
@@ -92,7 +91,7 @@ class LSTM : public RecurrentNeuron{
 
 public:
 	// функции, реализующие подачу данных в математический аппарат сети дл€ нормального обучени€ или прогноза
-	virtual void fit(DataVector& train_data, long long batch_size = 0) override;
+	virtual void fit(DataVector& train_data, double target_error = 0, long long batch_size = 0) override;
 	virtual void predict(DataVector& test_data) override;
 
 	LSTM(double learning_rate, unint16 epochs, unint16 input_range, unint16 hidden_range, unint16 output_range);

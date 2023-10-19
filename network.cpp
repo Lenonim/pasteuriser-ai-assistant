@@ -78,8 +78,8 @@ void LSTM::train(double* x, double* y_real, size_t k) {
 	predict_error += error / double(output_range);
 
 	// ----- градиентный спуск -----
-
-	if (fabs(error / double(output_range)) > this->target_error) {
+	double error_presition = 0.00000001;
+	if (fabs(error / double(output_range)) > error_presition) {
 		double* de_dy = new double[this->output_range];
 		for (size_t i = 0; i < this->output_range; i++)
 			de_dy[i] = (y_predict[i] - y_real[i]) * dif_sigm(y_predict[i]);
@@ -194,12 +194,13 @@ void LSTM::calculate_gates(double*& forgate_gate, double*& x, double*& input_gat
 	}
 }
 
-void LSTM::fit(DataVector& train_data, long long batch_size) {
+void LSTM::fit(DataVector& train_data, double target_error, long long batch_size) {
 	// создаём и конфигурируем скейлер
 	Scaler scaler;
 	auto max_element = train_data.get_max_element();
 	auto min_element = train_data.get_min_element();
-	scaler.configure(max_element.value + max_element.value * 0.3, min_element.value - min_element.value * 0.3);
+	auto average_value = train_data.get_average_value();
+ 	scaler.configure(max_element.value + fabs(average_value) / 3, min_element.value - fabs(average_value) / 3);
 
 	// скейлим входные данные
 	scaler.scale(train_data);
@@ -245,7 +246,6 @@ void LSTM::fit(DataVector& train_data, long long batch_size) {
 		predict_error = 0;
 		batch_interator = 0;
 
-
 		// формируем входные цепочки и их соотвесттвующие реальные значения, с которыми будет проводиться сравнение предсказаний
 		for (int j = 0; j < work_size; j++) {
 			x[j] = create_input_vector(train_data, this->input_range, j);
@@ -288,6 +288,9 @@ void LSTM::fit(DataVector& train_data, long long batch_size) {
 		finish = clock();
 		std::cout << "| time = " << (double)(finish - start) / CLOCKS_PER_SEC << " sec "
 			<< "| E = " << predict_error << "\n";
+
+		if (target_error > predict_error)
+			break;
 	}
 
 #ifdef ErrorInfo
@@ -355,11 +358,14 @@ double* LSTM::forecast(double* x, size_t k) {
 
 void LSTM::predict(DataVector& test_data) {
 	// создаём и конфигурируем скейлер
-	Scaler sc;
-	sc.configure(120, 0);
+	Scaler scaler;
+	auto max_element = test_data.get_max_element();
+	auto min_element = test_data.get_min_element();
+	auto average_value = test_data.get_average_value();
+	scaler.configure(max_element.value + fabs(average_value) / 3, min_element.value - fabs(average_value) / 3);
 
 	// скейлим входные данные
-	sc.scale(test_data);
+	scaler.scale(test_data);
 
 	// предполагается, что расстояние между точками по оси Х равное, поэтому вычисляем его
 	size_t dist = test_data.count_distance();
@@ -420,7 +426,7 @@ void LSTM::predict(DataVector& test_data) {
 	free_temp_weigth();
 
 	// востанавливаем значиня из промежутка [0, 1] в нормальный промежуток
-	sc.unscale(test_data);
+	scaler.unscale(test_data);
 }
 
 LSTM::LSTM(double learning_rate, unint16 epochs, unint16 input_range, unint16 hidden_range, unint16 output_range) : RecurrentNeuron(learning_rate, epochs, input_range) {
@@ -476,30 +482,34 @@ LSTM::~LSTM() {
 
 void load_model(LSTM& lstm, string file_name) {
 	std::ifstream work_file(file_name, std::ios::binary | std::ios::in);
+	if (!work_file.is_open()) {
+		system("cls");
+		std::cerr << "\n!Load model error: model file is not open!\n";
+		exit(0);
+	}
 
 	// ranges
 	unint16 temp_range;
 	work_file.read((char*)&temp_range, sizeof(lstm.input_range));
 	if (temp_range != lstm.input_range) {
 		system("cls");
-		std::cerr << "При чтении данных модели с файла произошла ошибка: входная размерность сохранённой модели не совпадает с переданной в функцию!\n";
+		std::cerr << "\n!Load model error: invalid input range\n";
 		exit(0);
 	}
 	work_file.read((char*)&temp_range, sizeof(lstm.hidden_range));
 	if (temp_range != lstm.hidden_range) {
 		system("cls");
-		std::cerr << "При чтении данных модели с файла произошла ошибка: скрытая размерность сохранённой модели не совпадает с переданной в функцию!\n";
+		std::cerr << "\n!Load model error: invalid hidden range\n";
 		exit(0);
 	}
 	work_file.read((char*)&temp_range, sizeof(lstm.output_range));
 	if (temp_range != lstm.output_range) {
 		system("cls");
-		std::cerr << "При чтении данных модели с файла произошла ошибка: выходная размерность сохранённой модели не совпадает с переданной в функцию!\n";
+		std::cerr << "\n!Load model error: invalid output range\n";
 		exit(0);
 	}
 
 	// параметры
-	work_file.read((char*)&lstm.target_error, sizeof(double));
 	work_file.read((char*)&lstm.learning_rate, sizeof(double));
 	work_file.read((char*)&lstm.predict_error, sizeof(double));
 	work_file.read((char*)&lstm.epochs, sizeof(unint16));
@@ -521,7 +531,7 @@ void load_model(LSTM& lstm, string file_name) {
 			work_file.read((char*)&lstm.W_g[i][j], sizeof(lstm.W_g[i][j]));
 		}
 		for (size_t j = 0; j < lstm.output_range; j++)
-			work_file.read((char*)&lstm.W_y[i][j], sizeof(lstm.W_y[i][j]));
+			work_file.read((char*)&lstm.W_y[j][i], sizeof(lstm.W_y[j][i]));
 		work_file.read((char*)&lstm.last_h_from_train[i], sizeof(lstm.last_h_from_train[i]));
 		work_file.read((char*)&lstm.last_C_from_train[i], sizeof(lstm.last_C_from_train[i]));
 	}
@@ -531,7 +541,7 @@ void load_model(LSTM& lstm, string file_name) {
 void dump_model(LSTM& lstm, string file_name) {
 	if (lstm.last_h_from_train == nullptr || lstm.last_C_from_train == nullptr) {
 		system("cls");
-		std::cerr << "При сохранении модели произошла ошибка: нельзя сохранять необученную модель!\n";
+		std::cerr << "\n!Dump model error: the model has no memory!\n";
 		exit(0);
 	}
 
@@ -543,7 +553,6 @@ void dump_model(LSTM& lstm, string file_name) {
 	result_file.write((char*)&lstm.output_range, sizeof(lstm.output_range));
 
 	// параметры
-	result_file.write((char*)&lstm.target_error, sizeof(lstm.target_error));
 	result_file.write((char*)&lstm.learning_rate, sizeof(lstm.learning_rate));
 	result_file.write((char*)&lstm.predict_error, sizeof(lstm.predict_error));
 	result_file.write((char*)&lstm.epochs, sizeof(lstm.epochs));
@@ -563,7 +572,7 @@ void dump_model(LSTM& lstm, string file_name) {
 			result_file.write((char*)&lstm.W_g[i][j], sizeof(lstm.W_g[i][j]));
 		}
 		for (size_t j = 0; j < lstm.output_range; j++)
-			result_file.write((char*)&lstm.W_y[i][j], sizeof(lstm.W_y[i][j]));
+			result_file.write((char*)&lstm.W_y[j][i], sizeof(lstm.W_y[j][i]));
 		result_file.write((char*)&lstm.last_h_from_train[i], sizeof(lstm.last_h_from_train[i]));
 		result_file.write((char*)&lstm.last_C_from_train[i], sizeof(lstm.last_C_from_train[i]));
 	}
