@@ -127,6 +127,22 @@ DATA DataVector::get_min_element() {
 	return min_element;
 }
 
+double DataVector::get_average_value() {
+	double average_sum = this->array[0].value;
+	double average_value = 0;
+	double average_iterator = 0;
+	for (size_t i = 1; i < this->size; i++) {
+		average_sum += this->array[i].value;
+		if (i % 10 == 0) {
+			average_value += average_sum / 10;
+			average_iterator++;
+			average_sum = 0;
+		}
+	}
+	average_value /= average_iterator;
+	return average_value;
+}
+
 void DataVector::inc_size() {
 	this->size++;
 	if (size >= capacity) 

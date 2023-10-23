@@ -32,8 +32,11 @@ private:
     size_t size;
 
     void add_memory();
+
     int get_records_count_in_file(std::string file_name); 
+
     size_t get_lines_count_in_file(std::ifstream& file, char line_separator); 
+
     void inc_size();
 
 public:
@@ -44,6 +47,8 @@ public:
     DATA get_max_element();
     
     DATA get_min_element();
+
+    double get_average_value();
 
 	void push_back(const DATA& value);
 
