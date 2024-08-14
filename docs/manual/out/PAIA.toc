@@ -1,0 +1,22 @@
+\selectlanguage *[]{russian}
+\selectlanguage *[babelshorthands = true]{russian}
+\contentsline {section}{\numberline {1} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Модуль DataManipulator }{2}{}%
+\contentsline {subsection}{\numberline {1.1} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Назначение модуля DataManipulator }{2}{}%
+\contentsline {subsection}{\numberline {1.2} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Главное меню модуля DataManipulator. }{2}{}%
+\contentsline {subsection}{\numberline {1.3} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Меню обработки данных OCDF-формата модуля DataManipulator. }{2}{}%
+\contentsline {subsubsection}{\numberline {1.3.1} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Считывание OCDF-данных из файла. }{2}{}%
+\contentsline {subsubsection}{\numberline {1.3.2} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Возможности по обработке OCDF-данных. }{4}{}%
+\contentsline {subsection}{\numberline {1.4} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Обезка OCDF-данных. }{5}{}%
+\contentsline {subsubsection}{\numberline {1.4.1} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Обрезка OCDF-данных по заданному проценту. }{5}{}%
+\contentsline {subsubsection}{\numberline {1.4.2} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Обрезка OCDF-данных по заданному количеству. }{6}{}%
+\contentsline {subsubsection}{\numberline {1.4.3} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Обрезка OCDF-данных по заданному моменту времени. }{7}{}%
+\contentsline {subsubsection}{\numberline {1.4.4} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Возможные ошибки при обрезке OCDF-данных. }{7}{}%
+\contentsline {subsection}{\numberline {1.5} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Парсинг OCDF-данных. }{9}{}%
+\contentsline {subsubsection}{\numberline {1.5.1} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Процесс парсинга OCDF-данных. }{9}{}%
+\contentsline {subsubsection}{\numberline {1.5.2} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Возможные ошибки при парсинге OCDF-данных. }{9}{}%
+\contentsline {subsection}{\numberline {1.6} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Выравнивание диапазонов OCDF-данных. }{10}{}%
+\contentsline {subsubsection}{\numberline {1.6.1} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Математические основы выравнивания диапазонов OCDF-данных. }{10}{}%
+\contentsline {subsubsection}{\numberline {1.6.2} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Процесс выравнивания диапазонов OCDF-данных. }{10}{}%
+\contentsline {subsubsection}{\numberline {1.6.3} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Возможные ошибки при выравнивании диапазонов OCDF-данных. }{10}{}%
+\contentsline {subsection}{\numberline {1.7} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Сохранение данных в файд формата csv. }{10}{}%
+\contentsline {subsection}{\numberline {1.8} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Сохранение данных в бинарный файл. }{10}{}%

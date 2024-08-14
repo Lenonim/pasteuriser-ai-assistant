@@ -1,0 +1,264 @@
+PWD d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual
+INPUT C:\Users\Aboimov\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
+INPUT PAIA.tex
+OUTPUT d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual\out\PAIA.log
+INPUT .\preamble.tex
+INPUT .\preamble.tex
+INPUT preamble.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\ragged2e\ragged2e.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\ragged2e\ragged2e.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\titlesec\titlesec.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\titlesec\titlesec.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\xetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\xetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\xetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\epsfig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\epsfig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\svg\svg.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\svg\svg.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrbase.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrbase.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrlfile.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrlfile.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrlfile-hook.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrlfile-hook.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrlogo.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrlogo.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\trimspaces\trimspaces.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\trimspaces\trimspaces.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\shellesc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\shellesc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\ifplatform\ifplatform.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\ifplatform\ifplatform.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\catchfile\catchfile.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\catchfile\catchfile.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\etexcmds\etexcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\etexcmds\etexcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifluatex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifluatex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\transparent\transparent.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\transparent\transparent.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\transparent\transparent-nometadata.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\transparent\transparent-nometadata.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\utilities\pgfutil-common.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\utilities\pgfutil-latex.def
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\pgf.revision.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\pgf.revision.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\utilities\pgfkeyslibraryfiltered.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgf.cfg
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-xetex.def
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-xetex.def
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-dvipdfmx.def
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\enumitem\enumitem.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\enumitem\enumitem.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\xebabel.def
+INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-russian\russianb.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-russian\russianb.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-russian\russianb.ldf
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\ru\babel-russian.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\ru\babel-russian.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\ru\babel-russian.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\ru\babel-ru.ini
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-en.ini
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\cyrillic\t2aenc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\cyrillic\t2aenc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\cyrillic\t2aenc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\cyrillic\t2acmr.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\cyrillic\t2acmr.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\cyrillic\t2acmr.fd
+INPUT C:\Users\Aboimov\AppData\Local\MiKTeX\fonts\tfm\lh\lh-t2a\larm1000.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-xetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-xetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec-xetex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec-xetex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\polyglossia\polyglossia.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\polyglossia\polyglossia.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xkeyval\xkeyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xkeyval\xkeyval.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\xkeyval\xkeyval.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\xkeyval\xkvutils.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\polyglossia\gloss-latex.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\polyglossia\gloss-latex.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\polyglossia\gloss-russian.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\polyglossia\gloss-russian.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\polyglossia\xpg-cyrillicnumbers.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\polyglossia\xpg-cyrillicnumbers.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\polyglossia\gloss-english.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\polyglossia\gloss-english.ldf
+INPUT d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual\out\PAIA.aux
+INPUT d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual\out\PAIA.aux
+INPUT d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual\out\PAIA.aux
+OUTPUT d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual\out\PAIA.aux
+INPUT C:\Program Files\MiKTeX\tex\latex\base\ts1cmr.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\base\ts1cmr.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\base\ts1cmr.fd
+INPUT d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual\out\PAIA.toc
+INPUT d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual\out\PAIA.toc
+INPUT d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual\out\PAIA.toc
+OUTPUT d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual\out\PAIA.toc
+INPUT .\DataManipulator.tex
+INPUT .\DataManipulator.tex
+INPUT DataManipulator.tex
+OUTPUT d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual\out\PAIA.xdv
+INPUT .\images\forDataManipulator\mainMenu.png
+INPUT .\images\forDataManipulator\mainMenu.png
+INPUT .\images\forDataManipulator\mainMenu.png
+INPUT .\images\forDataManipulator\readOCDFstage1.png
+INPUT .\images\forDataManipulator\readOCDFstage1.png
+INPUT .\images\forDataManipulator\readOCDFstage1.png
+INPUT .\images\forDataManipulator\readOCDFstage2.png
+INPUT .\images\forDataManipulator\readOCDFstage2.png
+INPUT .\images\forDataManipulator\readOCDFstage2.png
+INPUT .\images\forDataManipulator\readOCDFerror1.png
+INPUT .\images\forDataManipulator\readOCDFerror1.png
+INPUT .\images\forDataManipulator\readOCDFerror1.png
+INPUT .\images\forDataManipulator\readOCDFerror2.png
+INPUT .\images\forDataManipulator\readOCDFerror2.png
+INPUT .\images\forDataManipulator\readOCDFerror2.png
+INPUT .\images\forDataManipulator\readOCDFbin.png
+INPUT .\images\forDataManipulator\readOCDFbin.png
+INPUT .\images\forDataManipulator\readOCDFbin.png
+INPUT .\images\forDataManipulator\OCDFmenu.png
+INPUT .\images\forDataManipulator\OCDFmenu.png
+INPUT .\images\forDataManipulator\OCDFmenu.png
+INPUT .\images\forDataManipulator\ExOCDFdataForCating.png
+INPUT .\images\forDataManipulator\ExOCDFdataForCating.png
+INPUT .\images\forDataManipulator\ExOCDFdataForCating.png
+INPUT .\images\forDataManipulator\OCDFcutpercentstage1.png
+INPUT .\images\forDataManipulator\OCDFcutpercentstage1.png
+INPUT .\images\forDataManipulator\OCDFcutpercentstage1.png
+INPUT .\images\forDataManipulator\OCDFcutpercentstage2.png
+INPUT .\images\forDataManipulator\OCDFcutpercentstage2.png
+INPUT .\images\forDataManipulator\OCDFcutpercentstage2.png
+INPUT .\images\forDataManipulator\ExOCDFdataAftCatPer.png
+INPUT .\images\forDataManipulator\ExOCDFdataAftCatPer.png
+INPUT .\images\forDataManipulator\ExOCDFdataAftCatPer.png
+INPUT .\images\forDataManipulator\OCDFcutquantitystage1.png
+INPUT .\images\forDataManipulator\OCDFcutquantitystage1.png
+INPUT .\images\forDataManipulator\OCDFcutquantitystage1.png
+INPUT .\images\forDataManipulator\OCDFcutquantitystage2.png
+INPUT .\images\forDataManipulator\OCDFcutquantitystage2.png
+INPUT .\images\forDataManipulator\OCDFcutquantitystage2.png
+INPUT .\images\forDataManipulator\ExOCDFdataAftCatQuan.png
+INPUT .\images\forDataManipulator\ExOCDFdataAftCatQuan.png
+INPUT .\images\forDataManipulator\ExOCDFdataAftCatQuan.png
+INPUT .\images\forDataManipulator\OCDFcutmomentstage1.png
+INPUT .\images\forDataManipulator\OCDFcutmomentstage1.png
+INPUT .\images\forDataManipulator\OCDFcutmomentstage1.png
+INPUT .\images\forDataManipulator\OCDFcutmomentstage2.png
+INPUT .\images\forDataManipulator\OCDFcutmomentstage2.png
+INPUT .\images\forDataManipulator\OCDFcutmomentstage2.png
+INPUT .\images\forDataManipulator\ExOCDFdataAftCatMom.png
+INPUT .\images\forDataManipulator\ExOCDFdataAftCatMom.png
+INPUT .\images\forDataManipulator\ExOCDFdataAftCatMom.png
+INPUT .\images\forDataManipulator\ExOCDFdataCatError1.png
+INPUT .\images\forDataManipulator\ExOCDFdataCatError1.png
+INPUT .\images\forDataManipulator\ExOCDFdataCatError1.png
+INPUT .\images\forDataManipulator\ExOCDFdataCatError2.png
+INPUT .\images\forDataManipulator\ExOCDFdataCatError2.png
+INPUT .\images\forDataManipulator\ExOCDFdataCatError2.png
+INPUT .\images\forDataManipulator\ExOCDFdataCatError3.png
+INPUT .\images\forDataManipulator\ExOCDFdataCatError3.png
+INPUT .\images\forDataManipulator\ExOCDFdataCatError3.png
+INPUT .\images\forDataManipulator\ExOCDFdataCatError4.png
+INPUT .\images\forDataManipulator\ExOCDFdataCatError4.png
+INPUT .\images\forDataManipulator\ExOCDFdataCatError4.png
+INPUT .\images\forDataManipulator\OCDFdataParcing.png
+INPUT .\images\forDataManipulator\OCDFdataParcing.png
+INPUT .\images\forDataManipulator\OCDFdataParcing.png
+INPUT .\images\forDataManipulator\OCDFdataParsErrUnknowCID.png
+INPUT .\images\forDataManipulator\OCDFdataParsErrUnknowCID.png
+INPUT .\images\forDataManipulator\OCDFdataParsErrUnknowCID.png
+INPUT .\images\forDataManipulator\OCDFdataParsErrInvalid.png
+INPUT .\images\forDataManipulator\OCDFdataParsErrInvalid.png
+INPUT .\images\forDataManipulator\OCDFdataParsErrInvalid.png
+INPUT .\images\forDataManipulator\OCDFdataParsErrNotCID.png
+INPUT .\images\forDataManipulator\OCDFdataParsErrNotCID.png
+INPUT .\images\forDataManipulator\OCDFdataParsErrNotCID.png
+INPUT d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual\out\PAIA.aux
