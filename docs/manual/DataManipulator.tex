@@ -474,15 +474,68 @@
 
 {\standartFont
 
-  \par Для сохранения 
+  \par Для сохранения данных в текстовом режиме достаточно выбрать соответствующий пунтк меню и в появившемся запросе указать путь к файлу, в который будут сохранены данные. Это продемонстрировано на рисунке \ref{fig:OCDFsafeCSV}.
 
-  \par Из особенностей, хотелось бы отметить, что при сохранении в текстовом режиме требуется обязательно указывать расширение файла, поскольку текстово можно сохранить в любом формате, кроме зарезервированного формата .bin. 
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/forDataManipulator/OCDFsafeCSV.png}
+    \caption{сохранение OCDF-данных в текстовом режиме.} 
+    \label{fig:OCDFsafeCSV}
+  \end{figure}
+
+  \par Из особенностей, хотелось бы отметить, что при сохранении в текстовом режиме требуется обязательно указывать расширение файла, поскольку текстово можно сохранить в любом формате, кроме зарезервированных форматов. 
 }
 
 \subsubsection{ \standartTitleFont
   Сохранение OCDF-данных в бинарный файл.
 }
 
+{\standartFont
+
+  \par Для сохранения данных в бинарном режиме достаточно выбрать соответствующий пунтк меню и в появившемся запросе указать путь к файлу, в который будут сохранены данные. Это продемонстрировано на рисунке \ref{fig:OCDFsafeBIN}.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/forDataManipulator/OCDFsafeBIN.png}
+    \caption{сохранение OCDF-данных в бинарном режиме.} 
+    \label{fig:OCDFsafeBIN}
+  \end{figure}
+
+  \par Из особенностей, хотелось бы отметить, что при сохранении в бинарном режиме не обязательно указывать расширение файла, поскольку расширение .bin будет добавлено автоматически, даже если расширение указать. 
+}
+
+\subsubsection{ \standartTitleFont
+  Возможные ошибки при сохранении OCDF-данных в файл.
+}
+
+{\standartFont
+
+  \par В качестве ошибок может выступать ввод зарезервированных форматов при сохранении в текстовом режиме, таких как .tlstm, .vlstm, .lstm, .bin, что показано на рисунке \ref{fig:OCDFsafeERes}.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/forDataManipulator/OCDFsafeCSVErrReser.png}
+    \caption{сохранение OCDF-данных в бинарном режиме.} 
+    \label{fig:OCDFsafeERes}
+  \end{figure}
+
+  \par также к ошибкам можно отнести слишком маленькое имя файла. Имя файла должно иметь более 5 символов в своём названии включая расширение. Эта ошибка продемонстрирова на рисунке \ref{fig:OCDFsafeEInv}.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/forDataManipulator/OCDFsafeCSVErrInvalid.png}
+    \caption{сохранение OCDF-данных в бинарном режиме.} 
+    \label{fig:OCDFsafeEInv}
+  \end{figure}
+}
+
 \subsection{ \standartTitleFont
   Выход из меню работы с OCDF-данными.
+}
+
+{\standartFont
+
+  \par Для выхода из меню работы с OCDF-данными достаточно ввести 0 и тогда загруженные из файла OCDF-данные освободятся из памяти, поэтому перед выходом из меню не забудьте сохранить результаты обработки данных. 
+
+  \par
 }
