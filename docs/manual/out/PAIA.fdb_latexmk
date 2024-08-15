@@ -1,10 +1,19 @@
 # Fdb version 4
-["xdvipdfmx"] 1723650798.654 "out/PAIA.xdv" "out/PAIA.pdf" "out/PAIA" 1723650799.93069 0
-  "out/PAIA.xdv" 1723650798 138360 4b939d6fcfaae92638b3978ae07c54aa "xelatex"
+["xdvipdfmx"] 1723709208.28574 "out/PAIA.xdv" "out/PAIA.pdf" "out/PAIA" 1723709209.70018 0
+  "out/PAIA.xdv" 1723709207 168784 2feadb74ac5c41e1d313a2d8b789d0b1 "xelatex"
   (generated)
   "out/PAIA.pdf"
   (rewritten before read)
-["xelatex"] 1723650795.8426 "PAIA.tex" "out/PAIA.xdv" "PAIA" 1723650799.9194 0
+["xelatex"] 1723709204.85179 "PAIA.tex" "out/PAIA.xdv" "PAIA" 1723709209.6889 0
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi9.tfm" 1136765053 1524 d89e2d087a9828407a196f428428ef4a ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmr6.tfm" 1136765053 1300 b62933e007d01cfd073f79b963c01526 ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmr9.tfm" 1136765053 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy9.tfm" 1136765053 1116 25a7bf822c58caf309a702ef79f4afbb ""
   "C:/Program Files/MiKTeX/tex/generic/babel/babel.sty" 1713592802 146627 f7a4a651a7b2f00e9d4cc78db15bfe2a ""
   "C:/Program Files/MiKTeX/tex/generic/babel/locale/en/babel-en.ini" 1713592804 3966 caeee5a9e5771d4446aa1ca9015ba1b2 ""
   "C:/Program Files/MiKTeX/tex/generic/babel/locale/en/babel-english.tex" 1713592804 336 ed676b5e7dfd862bc78d634f6a973f37 ""
@@ -87,7 +96,7 @@
   "C:/Program Files/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Aboimov/AppData/Local/MiKTeX/fonts/tfm/lh/lh-t2a/larm1000.tfm" 1716395793 3220 0e417eaf233b160335902e97259a6c77 ""
   "C:/Users/Aboimov/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1716395601 37556162 8435237845115fd06b0627ecfcf11315 ""
-  "DataManipulator.tex" 1723650791 25799 1fa58e220f12e214d4c0ab2568d965dc ""
+  "DataManipulator.tex" 1723709203 32083 a1aad6ea185a0ee3b71457e83d84e4cb ""
   "PAIA.tex" 1717312755 113 3acd480357d7728734ac86dc2e85f049 ""
   "images/forDataManipulator/ExOCDFdataAftCatMom.png" 1723628023 4964 549c6a57f04b70ac1c35d36b4226e83e ""
   "images/forDataManipulator/ExOCDFdataAftCatPer.png" 1723626024 4838 c4840daed05b9d4c509b545870066be3 ""
@@ -97,6 +106,7 @@
   "images/forDataManipulator/ExOCDFdataCatError3.png" 1723638773 14887 a5f4f95acbc833830af29eaaa03acde3 ""
   "images/forDataManipulator/ExOCDFdataCatError4.png" 1723639091 14613 540c1ce4c176bfce1a78e6fd6fb2c6dd ""
   "images/forDataManipulator/ExOCDFdataForCating.png" 1723624690 4968 b357f812b2867171d355bacba711309e ""
+  "images/forDataManipulator/OCDFApprErr1.png" 1723709130 15119 ddabe617d8086a9c1ca7999a92c66715 ""
   "images/forDataManipulator/OCDFcutmomentstage1.png" 1723627944 8108 48024620246e1c1fff010634274a9651 ""
   "images/forDataManipulator/OCDFcutmomentstage2.png" 1723627970 10420 45c931f799d64ae4cca4be535f5a62d1 ""
   "images/forDataManipulator/OCDFcutpercentstage1.png" 1717312755 10754 6e2b9eafcff1d4a8787736be277329c0 ""
@@ -108,15 +118,16 @@
   "images/forDataManipulator/OCDFdataParsErrNotCID.png" 1723650065 12557 2acde482706f9f62ed116feffc5acacb ""
   "images/forDataManipulator/OCDFdataParsErrUnknowCID.png" 1723649406 12463 e1c7c53c8beefd14e303aa011cd69561 ""
   "images/forDataManipulator/OCDFmenu.png" 1717312755 31144 c65c93ba5d4cf01ebc32ceb346f1b61b ""
+  "images/forDataManipulator/OCDFrightIntervals.png" 1723707942 9957 8f17992493eaedab28ff2f333150c0f4 ""
   "images/forDataManipulator/mainMenu.png" 1717312755 17388 599c4505c89fda0d85873abe4c74ac77 ""
   "images/forDataManipulator/readOCDFbin.png" 1717312755 13547 0ae9660c6d7d1db86e425db0ca07c1f6 ""
   "images/forDataManipulator/readOCDFerror1.png" 1717312755 18371 49389332c3ea787c11936c65a5814eb9 ""
   "images/forDataManipulator/readOCDFerror2.png" 1717312755 19184 548c0a3178f138833862641faaf47dfb ""
   "images/forDataManipulator/readOCDFstage1.png" 1717312755 8129 44d63c7ff7696bc18fa93a2fa312df7e ""
   "images/forDataManipulator/readOCDFstage2.png" 1723626901 9962 a2fe6241344af3f77ddb6ab41afa9b26 ""
-  "out/PAIA.aux" 1723650798 16528 627e75b9c12cfea62b1ba7661d5481e7 "xelatex"
-  "out/PAIA.toc" 1723650798 3735 f31cc32fc5942259c8b9c1f7673a369f "xelatex"
-  "preamble.tex" 1717312755 1280 e54af2670067231afd35469bdd60017a ""
+  "out/PAIA.aux" 1723709207 18356 151c7ab51090c088fad412e34b1683a2 "xelatex"
+  "out/PAIA.toc" 1723709207 3921 d58b3bc7a9553bcefbf38c30b8c95be4 "xelatex"
+  "preamble.tex" 1723706846 1280 e54af2670067231afd35469bdd60017a ""
   (generated)
   "out/PAIA.aux"
   "out/PAIA.log"

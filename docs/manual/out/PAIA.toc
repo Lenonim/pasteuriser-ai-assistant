@@ -15,8 +15,9 @@
 \contentsline {subsubsection}{\numberline {1.5.1} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Процесс парсинга OCDF-данных. }{9}{}%
 \contentsline {subsubsection}{\numberline {1.5.2} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Возможные ошибки при парсинге OCDF-данных. }{9}{}%
 \contentsline {subsection}{\numberline {1.6} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Выравнивание диапазонов OCDF-данных. }{10}{}%
-\contentsline {subsubsection}{\numberline {1.6.1} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Математические основы выравнивания диапазонов OCDF-данных. }{10}{}%
-\contentsline {subsubsection}{\numberline {1.6.2} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Процесс выравнивания диапазонов OCDF-данных. }{10}{}%
-\contentsline {subsubsection}{\numberline {1.6.3} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Возможные ошибки при выравнивании диапазонов OCDF-данных. }{10}{}%
-\contentsline {subsection}{\numberline {1.7} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Сохранение данных в файд формата csv. }{10}{}%
-\contentsline {subsection}{\numberline {1.8} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Сохранение данных в бинарный файл. }{10}{}%
+\contentsline {subsubsection}{\numberline {1.6.1} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Математические основы выравнивания диапазонов OCDF-данных. }{11}{}%
+\contentsline {subsubsection}{\numberline {1.6.2} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Процесс выравнивания диапазонов OCDF-данных. }{11}{}%
+\contentsline {subsubsection}{\numberline {1.6.3} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Возможные ошибки при выравнивании диапазонов OCDF-данных. }{12}{}%
+\contentsline {subsection}{\numberline {1.7} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Сохранение OCDF-данных в файл формата csv. }{12}{}%
+\contentsline {subsection}{\numberline {1.8} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Сохранение OCDF-данных в бинарный файл. }{12}{}%
+\contentsline {subsection}{\numberline {1.9} \cyrillicfont \englishfont \fontsize {14pt}{0pt}\selectfont Выход из меню работы с OCDF-данными. }{12}{}%

@@ -261,4 +261,19 @@ INPUT .\images\forDataManipulator\OCDFdataParsErrInvalid.png
 INPUT .\images\forDataManipulator\OCDFdataParsErrNotCID.png
 INPUT .\images\forDataManipulator\OCDFdataParsErrNotCID.png
 INPUT .\images\forDataManipulator\OCDFdataParsErrNotCID.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT .\images\forDataManipulator\OCDFrightIntervals.png
+INPUT .\images\forDataManipulator\OCDFrightIntervals.png
+INPUT .\images\forDataManipulator\OCDFrightIntervals.png
+INPUT .\images\forDataManipulator\OCDFApprErr1.png
+INPUT .\images\forDataManipulator\OCDFApprErr1.png
+INPUT .\images\forDataManipulator\OCDFApprErr1.png
 INPUT d:\SCADA-AI-ASSISTANT\pasteuriser-ai-assistant\docs\manual\out\PAIA.aux
