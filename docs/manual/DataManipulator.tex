@@ -1,10 +1,10 @@
-\sectionbreak \section{ \standartTitleFont
+\sectionbreak \section{  \standartTitleFont
   Модуль DataManipulator
-}
+} \label{sec:DataManipulator}
 
 \subsection{ \standartTitleFont
   Назначение модуля DataManipulator
-}
+} \label{subsec:targerDM}
 
 {\standartFont
 
@@ -15,7 +15,7 @@
 
 \subsection{ \standartTitleFont
   Главное меню модуля DataManipulator.
-}
+} \label{subsec:MainMenuDM}
 
 {\standartFont
 
@@ -34,11 +34,11 @@
 
 \subsection{ \standartTitleFont
   Меню обработки данных OCDF-формата модуля DataManipulator.
-} 
+} \label{subsec:targerDM}
 
 \subsubsection{ \standartTitleFont
   Считывание OCDF-данных из файла.
-} 
+} \label{subsubsec:ReadOCDF}
 
 {\standartFont
 
@@ -94,7 +94,7 @@
 
 \subsubsection{ \standartTitleFont
   Возможности по обработке OCDF-данных. 
-}
+} \label{subsubsec:MenuOCDF}
 
 {\standartFont
 
@@ -114,7 +114,7 @@
 
 \subsection{ \standartTitleFont
   Обезка OCDF-данных. 
-}
+} \label{subsec:OCDFCut}
 
 {\standartFont
 
@@ -132,7 +132,7 @@
 
 \subsubsection{ \standartTitleFont
   Обрезка OCDF-данных по заданному проценту. 
-}
+} \label{subsubsec:OCDFCutPer}
 
 {\standartFont
 
@@ -170,7 +170,7 @@
 
 \subsubsection{ \standartTitleFont
   Обрезка OCDF-данных по заданному количеству. 
-}
+} \label{subsubsec:OCDFCutQuan}
 
 {\standartFont
 
@@ -208,7 +208,7 @@
 
 \subsubsection{ \standartTitleFont
   Обрезка OCDF-данных по заданному моменту времени. 
-}
+} \label{subsubsec:OCDFCutMom}
 
 {\standartFont
 
@@ -244,7 +244,7 @@
 
 \subsubsection{ \standartTitleFont
   Возможные ошибки при обрезке OCDF-данных. 
-}
+} \label{subsubsec:OCDFCutErr}
 
 {\standartFont
 
@@ -293,7 +293,7 @@
 
 \subsection{ \standartTitleFont
   Парсинг OCDF-данных. 
-}
+} \label{subsec:OCDFPars}
 
 {\standartFont
 
@@ -304,7 +304,7 @@
 
 \subsubsection{ \standartTitleFont
   Процесс парсинга OCDF-данных. 
-}
+} \label{subsubsec:OCDFParsProc}
 
 {\standartFont
 
@@ -314,7 +314,6 @@
     \centering
     \includegraphics[width=\textwidth]{images/forDataManipulator/OCDFdataParcing.png}
     \caption{ввод номера сида для парсинга OCDF-данных.} 
-
     \label{fig:OCDFdataParsSt}
   \end{figure}
 
@@ -325,7 +324,7 @@
 
 \subsubsection{ \standartTitleFont
   Возможные ошибки при парсинге OCDF-данных.
-}
+} \label{subsubsec:OCDFParsErr}
 
 {\standartFont
 
@@ -364,7 +363,7 @@
 
 \subsection{ \standartTitleFont
   Выравнивание диапазонов OCDF-данных.
-}
+} \label{subsec:OCDFRightIntervals}
 
 {\standartFont
 
@@ -375,7 +374,7 @@
 
 \subsubsection{ \standartTitleFont
   Математические основы выравнивания диапазонов OCDF-данных.
-}
+} \label{subsubsec:OCDFRIMath}
 
 {\standartFont
 
@@ -417,7 +416,7 @@
 
 \subsubsection{ \standartTitleFont
   Процесс выравнивания диапазонов OCDF-данных.
-}
+} \label{subsubsec:OCDFRIProc}
 
 {\standartFont
 
@@ -439,7 +438,7 @@
 
 \subsubsection{ \standartTitleFont
   Возможные ошибки при выравнивании диапазонов OCDF-данных.
-}
+} \label{subsubsec:OCDFRIErr}
 
 {\standartFont
 
@@ -458,8 +457,103 @@
 }
 
 \subsection{ \standartTitleFont
-  Сохранение OCDF-данных в файл.
+  Добавление OCDF-данных.
+} \label{subsec:OCDFAddData}
+
+{\standartFont
+
+  \par Имеется возможность добавление OCDF-данных к другим OCDF-данным. Это делается с помощью выбора соответствующего пункта меню. Для налача будет предложено ввести имя файла с данными, которые необходимо добавить. Это продемонстрировано на рисунке \ref{fig:AddOCDF}.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/forDataManipulator/AddOCDF.png}
+    \caption{ввод файла для добавления OCDF-данных.} 
+    \label{fig:AddOCDF}
+  \end{figure}
+
+  \par Далее будет предложено ввести количество данных, которых необходимо добавить. Это продемонстрировано на рисунке \ref{fig:AddOCDFHowMany}.
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/forDataManipulator/AddOCDFHowMany.png}
+    \caption{ввод количества OCDF-данных для добавления к другим OCDF-данных.} 
+    \label{fig:AddOCDFHowMany}
+  \end{figure}
+
+  \par Стоит предупредить, что программа никак не обрабатывает добавляемые OCDF-данные, за исключением идентефикации данных в файле как OCDF, поэтому добавление новых данных ложится на совесть пользователя. Он должен знать, что он добовляет, иначе операция может пройти корректно, но, например, одни данные могут быть равноинтервальными, а другие нет, разрыв, расстояние между добавленными и исходными данными может быть огромным и так далее. 
+
+  \par Впрочем, при добавлении данных, новые и старые данные смешиваются и сортируются по хронологическому порядку. Стоит отметить также и то, что данная функция может нарушать основное правило временных рядов: все данные отсортированы в хронологическом порядке и нет данных с одинаковым временным моментом. Нарушается скорее вторая часть правила. При добавление данных могут быть значения, относящиеся к моментам времени, которые уже определены в исходных данных. В таком случае данные всё равно добавятся. В одном временном моменте сначала будут идти исходные данные, а затем только добавленные. 
+
+  \par К ошибкам во время процесса добавления можно отнести ошибки, описанные в разделе \ref{subsubsec:ReadOCDF}.
+
+  \par 
 }
+
+\subsection{ \standartTitleFont
+  Визуализация OCDF-данных.
+} \label{subsubsec:OCDFVisual}
+
+{\standartFont
+
+  \par Для визуализации данных достаточно выбрать соответствующий пункт меню и дождаться появления окна с визуализированными данными. Вводить ничего не требуется. 
+
+  \par Визуализация данных может проходить по-разному. Всё зависит от данных, которые требуется визуализировать. Если в данных содержится информация, касаемая исключительно одного сида, то в окне визуализации появится только один график, а оси будут подписаны в соответствии с тем, что обозначает визуализированный сид. Это можно увидеть на рисунке \ref{fig:OCDFVisualOneCID}.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/forDataManipulator/OCDFVisualOneCID.png}
+    \caption{визуализация OCDF-данных одного сида} 
+    \label{fig:OCDFVisualOneCID}
+  \end{figure}
+
+  \par В случае, если данные содержат информацию более одно сида, то вопервых будет построено столько графиков, сколько сидов содержится в данных, во-вторых, появится легенда, дающая информацию о визуализированных сидах, в-третьих ось ординат не будет никак подписана, вся информация хранится в легенде. Это можно увидеть на рисунках \ref{fig:OCDFVisualTwoCIDs} и \ref{fig:OCDFVisualAllCIDs}.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/forDataManipulator/OCDFVisualTwoCIDs.png}
+    \caption{пример визуализация OCDF-данных с двумя сидами} 
+    \label{fig:OCDFVisualTwoCIDs}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/forDataManipulator/OCDFVisualAllCIDs.png}
+    \caption{пример визуализация OCDF-данных со всеми сидами}
+    \label{fig:OCDFVisualAllCIDs}
+  \end{figure}
+
+  \par Управление перейдёт к основной программе только после закрытия окна визуализации.  
+
+  \par 
+}
+
+\subsubsection{ \standartTitleFont
+  Управление визуализацией OCDF-данных.
+} \label{subsubsec:OCDFVisualControl}
+
+
+{\standartFont
+
+  \par При визуализации данных предусмотрено масштабирование окна визуализации. Прежде чем об этом рассказать, определить два сокращения. Первое сокращение: вращение колюсика мышки вперёд (от себя) {--} вкмВ. Второе сокращение: вращение колёсика мышки назад (на себя) {--} вкмН. Тогда имеем: 
+
+  \par вкмВ {--} позволяет увеличить масштаб окна визуализации. Проще говоря, позволяет приблизить изображение. 
+
+  \par вкмН {--} позволяет уменьшить масштаб окна визуализации. Проще говоря, позволяет отдалить изображение. 
+
+  \par Shift + вкмВ {--} позволяет увеличить масштаб по оси абсцисс (оси времени, оси X, нижней оси) окна визуализации. Проще говоря, позволяет растянуть изображение по ширине. 
+
+  \par Shift + вкмН {--} позволяет уменьшить масштаб по оси абсцисс (оси времени, оси X, нижней оси) окна визуализации. Проще говоря, позволяет сжать изображение по ширине.  
+
+  \par CTRL + вкмВ {--} позволяет увеличить масштаб по оси ординат (оси значений, оси У, боковой оси) окна визуализации. Проще говоря, позволяет растянуть изображение по высоте. 
+
+  \par CTRL + вкмН {--} позволяет уменьшить масштаб по оси ординат (оси значений, оси У, боковой оси) окна визуализации. Проще говоря, позволяет сжать изображение по высоте.  
+
+  \par 
+}
+
+\subsection{ \standartTitleFont
+  Сохранение OCDF-данных в файл.
+} \label{subsubsec:OCDFSafe}
 
 {\standartFont
 
@@ -470,7 +564,7 @@
 
 \subsubsection{ \standartTitleFont
   Сохранение OCDF-данных в файл формата csv.
-}
+} \label{subsubsec:OCDFSafeCSV}
 
 {\standartFont
 
@@ -483,12 +577,12 @@
     \label{fig:OCDFsafeCSV}
   \end{figure}
 
-  \par Из особенностей, хотелось бы отметить, что при сохранении в текстовом режиме требуется обязательно указывать расширение файла, поскольку текстово можно сохранить в любом формате, кроме зарезервированных форматов. 
+  \par Из особенностей, хотелось бы отметить, что при сохранении в текстовом режиме требуется обязательно указывать расширение файла, поскольку текстово можно сохранить в любом формате, кроме зарезервированных форматов. Но всё же рекомендуется указывать расширение .csv.
 }
 
 \subsubsection{ \standartTitleFont
   Сохранение OCDF-данных в бинарный файл.
-}
+} \label{subsubsec:OCDFSafeBIN}
 
 {\standartFont
 
@@ -506,7 +600,7 @@
 
 \subsubsection{ \standartTitleFont
   Возможные ошибки при сохранении OCDF-данных в файл.
-}
+} \label{subsubsec:OCDFSageErr}
 
 {\standartFont
 
@@ -531,11 +625,71 @@
 
 \subsection{ \standartTitleFont
   Выход из меню работы с OCDF-данными.
-}
+} \label{subsec:OCDFOut}
 
 {\standartFont
 
   \par Для выхода из меню работы с OCDF-данными достаточно ввести 0 и тогда загруженные из файла OCDF-данные освободятся из памяти, поэтому перед выходом из меню не забудьте сохранить результаты обработки данных. 
+
+  \par
+}
+
+\subsection{ \standartTitleFont
+  Сохранение TDF-данных в файл.
+} \label{subsec:TDFSafe}
+
+{\standartFont
+
+  \par После работы с данными конечно же появится надобность в сохранении результатов обработки данных. Для этого есть возможность сохранить данные в текстовом или бинарном режимах. 
+
+  \par Возможные ошибки при сохранении данных, которые могут возникать, уже описаны в разделе \ref{subsubsec:OCDFSageErr}.
+
+  \par 
+}
+
+\subsubsection{ \standartTitleFont
+  Сохранение TDF-данных в файл формата csv.
+} \label{subsubsec:TDFSafeCSV}
+
+{\standartFont
+
+  \par Для сохранения TDF-данных в текстовом режиме достаточно выбрать соответствующий пунтк меню и в появившемся запросе указать путь к файлу, в который будут сохранены данные. Это продемонстрировано на рисунке \ref{fig:TDFsafeCSV}.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/forDataManipulator/TDFsafeCSV.png}
+    \caption{сохранение TDF-данных в текстовом режиме.} 
+    \label{fig:TDFsafeCSV}
+  \end{figure}
+
+  \par Из особенностей, хотелось бы отметить, что при сохранении в текстовом режиме требуется обязательно указывать расширение файла, поскольку текстово можно сохранить в любом формате, кроме зарезервированных форматов. Но всё же рекомендуется указывать расширение .csv.
+}
+
+\subsubsection{ \standartTitleFont
+  Сохранение TDF-данных в бинарный файл.
+} \label{subsubsec:TDFSafeBIN}
+
+{\standartFont
+
+  \par Для сохранения TDF-данных в бинарном режиме достаточно выбрать соответствующий пунтк меню и в появившемся запросе указать путь к файлу, в который будут сохранены данные. Это продемонстрировано на рисунке \ref{fig:TDFsafeBIN}.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/forDataManipulator/TDFsafeBIN.png}
+    \caption{сохранение TDF-данных в бинарном режиме.} 
+    \label{fig:TDFsafeBIN}
+  \end{figure}
+
+  \par Из особенностей, хотелось бы отметить, что при сохранении в бинарном режиме не обязательно указывать расширение файла, поскольку расширение .bin будет добавлено автоматически, даже если расширение указать. 
+}
+
+\subsection{ \standartTitleFont
+  Выход из меню работы с TDF-данными.
+} \label{subsubsec:TDFOut}
+
+{\standartFont
+
+  \par Для выхода из меню работы с TDF-данными достаточно ввести 0 и тогда загруженные из файла TDF-данные освободятся из памяти, поэтому перед выходом из меню не забудьте сохранить результаты обработки данных. 
 
   \par
 }
